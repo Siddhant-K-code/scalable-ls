@@ -40,8 +40,18 @@ Example:
 cargo run -- ./demo_files/
 ```
 
+```sh
+cargo run -- --buf-size 1000000 ./demo_files/
+```
+
 ## Features
 
 - Handles directories with millions of files.
 - Efficient directory listing without hanging or crashing.
 - Customizable buffer size for performance tuning.
+
+## Example
+
+For 20000 files, both seem to be working. But, it could fail for larger number of files & also output is inconsistent in native `ls` in case of large numbers of files:
+
+![image](https://github.com/Siddhant-K-code/scalable-ls/assets/55068936/4fbcade5-f4df-481f-be04-be541003422f)
